@@ -5,6 +5,10 @@ literals = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eigh
 literals_with_digits = [(literals[x], x) for x in range(10)]
 
 
+def corrected_calibration_value(line):
+    return combine(first_and_last_numbers(replace_all_literals(line)))
+
+
 def replace_all_literals(line):
     return functools.reduce(lambda x,y: literals_to_digit(x, y[0], y[-1]), literals_with_digits, line)
 

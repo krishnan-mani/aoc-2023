@@ -2,6 +2,13 @@ from aoc import day1
 import pytest
 
 
+@pytest.mark.parametrize('line,expected', [
+    ("two1nine", 29),
+])
+def test_corrected_calibration_value(line, expected):
+    assert expected == day1.corrected_calibration_value(line)
+
+
 def test_replace_all_literals():
     line = "zeroonetwothreefourfivesixseveneightnine"
     assert "0123456789" == day1.replace_all_literals(line)
