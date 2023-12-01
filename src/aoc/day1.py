@@ -8,4 +8,4 @@ def first_and_last_numbers(line):
 
 
 def combine(twople):
-    return twople[0] + twople[1]
+    return (twople[0] * 10) + twople[1]
