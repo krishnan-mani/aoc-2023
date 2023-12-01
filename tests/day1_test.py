@@ -2,6 +2,15 @@ from aoc import day1
 import pytest
 
 
+def test_replace_all_literals():
+    line = "zeroonetwothreefourfivesixseveneightnine"
+    assert "0123456789" == day1.replace_all_literals(line)
+
+
+def test_literals_to_digit():
+    assert "a1b" == day1.literals_to_digit("aoneb", "one", 1)
+
+
 @pytest.mark.parametrize('line,expected', [
     ("1abc2", 12),
     ("pqr3stu8vwx", 38),
